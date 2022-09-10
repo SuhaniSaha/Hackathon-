@@ -1,2 +1,33 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import json
+import requests
+from geopy.geocoders import Nominatim
+import json
+import requests
+import geocoder
+
+
+IP= input("Enter th IP")
+ip = geocoder.ip(IP)
+print(ip.city)
+print(ip.latlng)
+location = ip.latlng
+location=(Latitude,Longitude)
+
+ 
+
+geolocator = Nominatim(user_agent="geoapiExercises")
+ 
+
+ 
+# Displaying Latitude and Longitude
+print("Latitude: ", Latitude)
+print("Longitude: ", Longitude)
+
+ 
+# Get location with geocode
+location = geolocator.geocode(Latitude+","+Longitude)
+ 
+# Display location
+print("\nLocation of the given Latitude and Longitude:")
+print(location)
+
